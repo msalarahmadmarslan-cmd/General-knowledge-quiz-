@@ -15,5 +15,6 @@ jobs:
         run: npm install -g @bubblewrap/cli
       - name: Build AAB
         run: |
-          yes_ bubblewrap build --manifest=./manifest.json
+          yes "" | bubblewrap init --manifest="https://msalarahmadmarslan-cmd.github.io/General-knowledge-quiz-/manifest.json" --packageId="com.rabia.gkquiz"
+          yes "" | bubblewrap build
           
