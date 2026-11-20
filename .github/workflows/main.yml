@@ -15,4 +15,4 @@ jobs:
         run: npm install -g @bubblewrap/cli
       - name: Build AAB
         run: |
-          bubblewrap build --manifest=./manifest.json
+          echoecho " _bubblewrap build --manifest=./manifest.json
