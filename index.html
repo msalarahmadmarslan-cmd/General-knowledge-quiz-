@@ -318,5 +318,9 @@ var _fin=finish;finish=async function(){await _fin();
  unsub=db.collection("scores").orderBy("total","desc").limit(50).onSnapshot(function(sn){var u=$("fl");if(!u)return;u.innerHTML="";if(sn.empty){u.innerHTML='<li><span class="n">No players yet.</span></li>';return}rowsTo(u,sn.docs)},function(){var u=$("fl");if(u)u.innerHTML='<li><span class="n">Could not load the leaderboard.</span></li>'})};
 login();
 </script>
-</body>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js');
+}
+</script></body>
 </html>
